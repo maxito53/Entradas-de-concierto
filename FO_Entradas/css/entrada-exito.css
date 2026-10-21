@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #0067b3;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 103, 179, 0.3);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logout-btn {
+    background: rgb(191, 94, 63);
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: rgb(185, 35, 35);
+}
+
+.success-hero {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.success-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="confetti" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="8" cy="8" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="14" cy="14" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23confetti)"/></svg>');
+    opacity: 0.3;
+}
+
+.success-content {
+    position: relative;
+    z-index: 2;
+}
+
+.success-icon {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.check-circle {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: successPulse 2s infinite;
+}
+
+@keyframes successPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.check-mark {
+    font-size: 4rem;
+    color: #28a745;
+    font-weight: bold;
+    animation: checkAppear 0.8s ease-in-out;
+}
+
+@keyframes checkAppear {
+    0% { 
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.success-hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.success-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ticket-details-section {
+    padding: 3rem 0;
+}
+
+.ticket-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 103, 179, 0.1);
+    overflow: hidden;
+    border: 3px solid #28a745;
+}
+
+.ticket-header {
+    background: linear-gradient(135deg, #0067b3, #004d85);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.ticket-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.ticket-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.ticket-code {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.ticket-info {
+    padding: 2.5rem;
+}
+
+.event-image-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.event-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #0067b3;
+    transition: all 0.3s ease;
+}
+
+.detail-row:hover {
+    background: #e3f2fd;
+    transform: translateX(5px);
+}
+
+.detail-row.main-event {
+    background: linear-gradient(135deg, #0067b3, #004d85);
+    color: white;
+    border-left: 4px solid #28a745;
+}
+
+.detail-row.price-row {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border-left: 4px solid #fff;
+}
+
+.detail-row.status-row {
+    background: linear-gradient(135deg, #ffc107, #ff8f00);
+    color: white;
+    border-left: 4px solid #fff;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: inherit;
+}
+
+.detail-value {
+    font-weight: 500;
+    text-align: right;
+}
+
+.detail-value.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.detail-value.status {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.actions-section {
+    padding: 3rem 0;
+    background: #f8f9fa;
+}
+
+.actions-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 103, 179, 0.1);
+    text-align: center;
+}
+
+.actions-card h3 {
+    font-size: 2rem;
+    color: #0067b3;
+    margin-bottom: 2rem;
+}
+
+.actions-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.home-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.home-btn:hover {
+    background: #5a6268;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(108, 117, 125, 0.4);
+}
+
+.pdf-btn {
+    background: #0067b3;
+    color: white;
+}
+
+.pdf-btn:hover {
+    background: #004d85;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 103, 179, 0.4);
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+}
+
+.additional-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.info-box {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid #0067b3;
+    text-align: left;
+}
+
+.info-box h4 {
+    color: #0067b3;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.info-box p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+.info-box strong {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .success-hero {
+        padding: 2rem 0;
+    }
+    
+    .success-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .success-hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .check-circle {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .check-mark {
+        font-size: 3rem;
+    }
+    
+    .ticket-card {
+        margin: 1rem;
+    }
+    
+    .ticket-header {
+        padding: 1.5rem;
+    }
+    
+    .ticket-info {
+        padding: 1.5rem;
+    }
+    
+    .event-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .detail-value {
+        text-align: center;
+    }
+    
+    .actions-card {
+        margin: 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .actions-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .action-btn {
+        width: 100%;
+    }
+    
+    .additional-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .success-hero h2 {
+        font-size: 1.3rem;
+    }
+    
+    .ticket-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .actions-card h3 {
+        font-size: 1.8rem;
+    }
+}

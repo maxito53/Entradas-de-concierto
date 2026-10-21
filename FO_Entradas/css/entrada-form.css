@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #0067b3;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 103, 179, 0.3);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s;
+    font-size: 13px;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.logout-btn {
+    background: rgb(191, 94, 63);
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: rgb(185, 35, 35);
+}
+
+.concert-hero {
+    background: linear-gradient(135deg, #0067b3, #004d85);
+    color: white;
+    padding: 2rem 0;
+}
+
+.concert-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.concert-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.concert-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.artist-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.artist-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.genre {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.event-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+.form-section {
+    padding: 3rem 0;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 103, 179, 0.1);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-header h2 {
+    font-size: 2.2rem;
+    color: #0067b3;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.form-step {
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+.form-step:hover {
+    border-color: #0067b3;
+    box-shadow: 0 5px 15px rgba(0, 103, 179, 0.1);
+}
+
+.form-step.active {
+    border-color: #0067b3;
+    background: #f8fbff;
+}
+
+.form-step.inactive {
+    background: #f8f9fa;
+    border-color: #ddd;
+    opacity: 0.6;
+}
+
+.step-description {
+    color: #999;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.step-title {
+    color: #0067b3;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: #0067b3;
+    box-shadow: 0 0 0 3px rgba(0, 103, 179, 0.1);
+}
+
+.form-group select:disabled {
+    background-color: #f8f9fa;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.price-display {
+    background: linear-gradient(135deg, #0067b3, #004d85);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.price-label {
+    font-size: 1.1rem;
+}
+
+.price-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.purchase-summary {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid #e1e5e9;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+.summary-row.total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #0067b3;
+    border-top: 2px solid #0067b3;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.form-actions-step {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.next-btn {
+    background: #0067b3;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.next-btn:hover {
+    background: #004d85;
+    transform: translateY(-2px);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.cancel-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.submit-btn {
+    background: #0067b3;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.submit-btn.active:hover {
+    background: #004d85;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 103, 179, 0.4);
+}
+
+.btn-icon {
+    font-size: 1.2rem;
+}
+
+.error-message {
+    background-color: #fee;
+    color: #c33;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fcc;
+    text-align: center;
+    font-weight: 500;
+}
+
+.success-message {
+    background-color: #efe;
+    color: #393;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cfc;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .header-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .concert-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .concert-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .concert-details h1 {
+        font-size: 2rem;
+    }
+    
+    .event-info {
+        justify-content: center;
+    }
+    
+    .form-container {
+        margin: 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .form-step {
+        padding: 1.5rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .cancel-btn,
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .concert-details h1 {
+        font-size: 1.8rem;
+    }
+    
+    .form-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .price-display {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}

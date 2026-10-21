@@ -1,0 +1,1 @@
+CREATE DATABASE TuraMax_Entradas;

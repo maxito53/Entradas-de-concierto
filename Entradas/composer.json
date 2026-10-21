@@ -1,0 +1,26 @@
+{
+	"name" : "max/entradas",
+	"description" : "Genera entradas de conciertos",
+	"type" : "project",
+	"require" : {
+		"doctrine/orm" : "3.3",
+		"mpdf/mpdf" : "8.2.5",
+		"mpdf/qrcode" : "^1.2",
+		"symfony/cache": "^7.2"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Entradas\\Entity\\" : "src/Entradas",
+			"" : [
+				"src/Controller",
+				"src/Entradas",
+				"src/Model"
+			]
+		}
+	},
+	"authors" : [{
+			"name" : "Max Tura Aguilera",
+			"email" : "mtaguil5@gmail.com"
+		}
+	]
+}

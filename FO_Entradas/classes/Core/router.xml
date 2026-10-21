@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <routes>
+        <default>
+            <controller>' . self::DEFAULT_CONTROLLER . '</controller>
+            <action>' . self::DEFAULT_ACTION . '</action>
+        </default>
+        <supported_methods>
+            <method>GET</method>
+            <method>POST</method>
+            <method>PUT</method>
+            <method>DELETE</method>
+        </supported_methods>
+    </routes>
+    <sanitization>
+        <filters>
+            <filter type="url">FILTER_SANITIZE_URL</filter>
+            <filter type="int">FILTER_SANITIZE_NUMBER_INT</filter>
+            <filter type="float">FILTER_SANITIZE_NUMBER_FLOAT</filter>
+            <filter type="email">FILTER_SANITIZE_EMAIL</filter>
+            <filter type="string">FILTER_SANITIZE_FULL_SPECIAL_CHARS</filter>
+        </filters>
+    </sanitization>
+</configuration>
